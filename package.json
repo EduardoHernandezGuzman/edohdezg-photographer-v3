@@ -7,7 +7,8 @@
     "dev": "sirv . --port 3000 --dev",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "optimize:images": "node scripts/optimize-images.mjs"
+    "optimize:images": "node scripts/optimize-images.mjs",
+    "build": "node scripts/build-site.mjs"
   },
   "devDependencies": {
     "prettier": "^3.9.9",

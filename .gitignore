@@ -15,3 +15,18 @@ npm-debug.log*
 .vscode/
 .idea/
 *.swp
+
+# Credenciales y configuración privada
+.env
+.env.*
+!.env.example
+.aws/
+.ssh/
+.codex/
+.agents/
+.npmrc
+.netrc
+*.pem
+*.key
+*.p12
+*.pfx

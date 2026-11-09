@@ -59,6 +59,7 @@ HTML5, CSS3 y JavaScript vanilla (módulos ES). Sin frameworks en runtime:
 
 | Comando                   | Descripción                                                       |
 | ------------------------- | ----------------------------------------------------------------- |
+| `npm run build`           | Prepara `dist/` con solo los archivos públicos del sitio.         |
 | `npm run dev`             | Sirve el sitio en `http://localhost:3000`.                        |
 | `npm run format`          | Formatea el proyecto con Prettier.                                |
 | `npm run format:check`    | Comprueba el formato sin modificar archivos.                      |
@@ -75,10 +76,12 @@ La primera vez hay que activarlo en **Settings → Pages → Source: GitHub Acti
 ### Render
 
 El repositorio incluye `render.yaml` para desplegarlo como sitio estático mediante
-un Blueprint. No necesita compilación ni un proceso Node en producción.
+un Blueprint. El comando `npm run build` prepara `dist/` con los archivos públicos; no necesita
+un proceso Node en producción.
 
-Para configurar un **Static Site** manualmente, deja **Root Directory** y
-**Build Command** vacíos y usa `.` como **Publish Directory**. Deben publicarse
+Para configurar un **Static Site** manualmente, deja **Root Directory** vacío, configura
+**Build Command** con `node scripts/build-site.mjs` y usa `dist` como
+**Publish Directory**. Deben publicarse
 también las carpetas `js/`, `css/`, `fonts/` e `img/` junto con `index.html`.
 
 Si el menú no responde, abre las herramientas del navegador y revisa **Console**
@@ -115,3 +118,12 @@ El **código** se distribuye bajo licencia MIT (ver [`LICENSE`](./LICENSE)). Las
 ## Contacto
 
 - Email: edohdezg@gmail.com
+
+## Seguridad y privacidad
+
+El despliegue publica únicamente `dist/`, generado por `npm run build`.
+Los originales de `img/`, las herramientas y los archivos del repositorio no
+forman parte de la web publicada. El repositorio es público: no añadas
+credenciales, archivos `.env` ni fotografías con metadatos personales.
+
+Dependabot revisa semanalmente las dependencias npm y las acciones de GitHub.

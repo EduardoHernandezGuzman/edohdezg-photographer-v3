@@ -2,5 +2,5 @@ services:
   - type: web
     name: edohdezg-photographer-v3
     runtime: static
-    buildCommand: ""
-    staticPublishPath: .
+    buildCommand: node scripts/build-site.mjs
+    staticPublishPath: dist
