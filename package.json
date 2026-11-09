@@ -11,7 +11,7 @@
     "build": "node scripts/build-site.mjs"
   },
   "devDependencies": {
-    "prettier": "^3.9.9",
+    "prettier": "^3.9.10",
     "sharp": "^0.35.5",
     "sirv-cli": "^3.0.1"
   }
