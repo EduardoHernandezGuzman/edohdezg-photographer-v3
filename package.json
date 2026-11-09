@@ -1,0 +1,17 @@
+{
+  "name": "edohdezg-photographer-v3",
+  "version": "3.0.0",
+  "private": true,
+  "description": "Portfolio fotográfico de EdoHdezG",
+  "scripts": {
+    "dev": "sirv . --port 3000 --dev",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "optimize:images": "node scripts/optimize-images.mjs"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.9",
+    "sharp": "^0.35.5",
+    "sirv-cli": "^3.0.1"
+  }
+}
